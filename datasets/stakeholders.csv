@@ -1,0 +1,9 @@
+StakeholderID,StakeholderName,Category,InfluenceLevel,ExpectedBenefit,PriorityLevel
+SH-01,Patient,End user,High,"Book appointments quickly, view history, receive reminders",High
+SH-02,Doctor,Internal user,High,"Manage schedule, view medical records, drug interaction warnings",High
+SH-03,Receptionist / Front desk staff,Internal user,Medium,"Confirm bookings, handle cancel/reschedule, assist walk-ins",Medium
+SH-04,Hospital Administrator,System owner,High,"Manage doctor/department catalog, operational reports, access control",High
+SH-05,Health insurance provider,External stakeholder,Medium,"Verify insurance coverage, reconcile costs",Low
+SH-06,Hospital IT department,System operator,Medium,"Maintenance, performance monitoring, data security",High
+SH-07,Health regulatory authority,Legal/regulatory stakeholder,Low,Compliance with health-data privacy and patient-safety regulations,High
+SH-08,Development team,Delivery stakeholder,High,"Correctly understand and implement requirements, control scope",High

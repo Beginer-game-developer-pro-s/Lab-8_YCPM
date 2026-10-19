@@ -1,0 +1,11 @@
+NFRID,AttributeName,SMARTMeasurementCriterion,ISO25010Category,VerificationMethod,Priority
+NFR-001,Performance,Doctor-search page response time <= 2s with 500 concurrent users.,Performance,Load testing,High
+NFR-002,Availability,The system shall achieve >= 99.5% monthly uptime (excluding scheduled maintenance).,Availability,30-day uptime monitoring,High
+NFR-003,Security,Medical record data shall be encrypted with AES-256 at rest and TLS 1.2+ in transit.,Security,Configuration review + penetration test,High
+NFR-004,Data privacy,The system shall follow data-minimization principles for personal data.,Privacy/Compliance,Compliance checklist review,High
+NFR-005,Scalability,The system shall handle 3x booking volume growth over 12 months without architecture changes.,Scalability,Incremental load testing,Medium
+NFR-006,Usability,A first-time user shall complete their first booking in <= 3 minutes without guidance.,Usability,Usability testing,Medium
+NFR-007,Safety,The system shall raise a conflict warning within <= 1 second when a doctor double-booking is detected.,Safety,Booking-conflict scenario testing,High
+NFR-008,Recoverability,"The system shall recover booking data within 15 minutes after an incident (RPO<=5min, RTO<=15min).",Reliability,Disaster-recovery drill,High
+NFR-009,Maintainability,Source code shall achieve >= 80% unit-test coverage for the booking module.,Maintainability,CI coverage report,Medium
+NFR-010,Compatibility,"The UI shall work correctly on Chrome, Safari, Edge versions released in the last 2 years.",Compatibility/Portability,Cross-browser testing,Low

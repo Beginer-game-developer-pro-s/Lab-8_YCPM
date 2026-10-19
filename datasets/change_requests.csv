@@ -1,0 +1,6 @@
+ChangeRequestID,DateProposed,ProposedBy_StakeholderID,AffectedRequirement,ChangeDescription,Priority,Status,EstimatedImpact
+CR-001,2025-09-10,SH-04,FR-010,Add a report on cancellation rate per doctor,Medium,Approved,"Affects reporting module, +3 working days"
+CR-002,2025-09-22,SH-07,NFR-003,Upgrade medical-record encryption to AES-256-GCM per new regulation,High,Approved,Improves security + increases infrastructure cost
+CR-003,2025-10-01,SH-01,FR-004,Allow up to 3 reschedules/month instead of unlimited,Low,Under review,Needs clarification with the medical board
+CR-004,2025-10-05,SH-02,FR-008,Extend drug-interaction warnings to also cover supplements,Medium,Rejected,Out of phase-1 scope
+CR-005,2025-10-12,SH-05,FR-011,Integrate 2 additional insurance partners,Medium,Approved,"Requires separate API integration contract, +2 weeks"

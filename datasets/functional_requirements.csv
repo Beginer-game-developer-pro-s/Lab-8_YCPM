@@ -1,0 +1,13 @@
+ReqID,Title,RelatedStakeholder,Description,Priority,Status,RelatedUseCase
+FR-001,Patient account registration and login,SH-01,The system shall allow patients to register via email/phone and verify via OTP.,High,Proposed,UC-01
+FR-002,Search doctors by specialty/location,SH-01,"The system shall allow searching doctors by specialty, name, rating, and location.",High,Proposed,UC-02
+FR-003,Book an appointment online,SH-01,The system shall allow patients to select a doctor and an available time slot to book.,High,Approved,UC-03
+FR-004,Cancel / reschedule an appointment,SH-01,The system shall allow patients to cancel or reschedule at least 2 hours in advance.,High,Approved,UC-04
+FR-005,Receptionist confirms appointment,SH-03,The system shall allow the receptionist to confirm or reject a booking request.,Medium,Proposed,UC-05
+FR-006,Appointment reminder via email/SMS,SH-01,The system shall automatically send reminders 24 hours and 1 hour in advance.,Medium,Proposed,UC-06
+FR-007,Doctor views and updates medical records,SH-02,The system shall allow doctors to view visit history and record new results.,High,Approved,UC-07
+FR-008,Drug interaction / allergy warning,SH-02,The system shall warn doctors when a prescription conflicts with a known allergy.,High,Proposed,UC-08
+FR-009,Manage doctor and department catalog,SH-04,The system shall allow admins to add/edit/remove doctor and specialty records.,Medium,Approved,UC-09
+FR-010,Visit statistics report,SH-04,The system shall export reports on booking/cancellation counts by day/month.,Low,Proposed,UC-10
+FR-011,Verify health insurance coverage,SH-05,The system shall call a partner insurance API to check policy validity.,Medium,Proposed,UC-11
+FR-012,Role-based access control (RBAC),SH-06,The system shall restrict features by role: patient/doctor/receptionist/admin.,High,Approved,UC-12

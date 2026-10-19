@@ -1,0 +1,13 @@
+UseCaseID,UseCaseName,PrimaryActor,SecondaryActor,Summary,Preconditions,Postconditions,RelatedRequirement
+UC-01,Register account,Patient,System,A patient creates a new account to use the booking service.,No existing account,Account created and activated,FR-001
+UC-02,Search for a doctor,Patient,System,A patient searches for a suitable doctor by criteria.,Logged in,Matching doctor list is displayed,FR-002
+UC-03,Book an appointment,Patient,"System, Doctor",A patient selects a time slot and confirms a booking.,Doctor already found,Appointment created with status pending_confirmation,FR-003
+UC-04,Cancel/reschedule appointment,Patient,System,A patient cancels or reschedules to another slot.,Has an existing appointment,Appointment status updated to cancelled/rescheduled,FR-004
+UC-05,Confirm appointment,Receptionist,System,Receptionist reviews and confirms a new booking.,Appointment pending confirmation,Appointment status changes to confirmed,FR-005
+UC-06,Send appointment reminder,System,Patient,The system automatically sends a reminder notification.,Appointment confirmed,Notification sent successfully,FR-006
+UC-07,Update medical record,Doctor,System,Doctor records visit outcomes into the patient's record.,During a consultation,Medical record updated,FR-007
+UC-08,Drug interaction warning,System,Doctor,The system checks a prescription against known allergy/interaction history.,Doctor is prescribing,Warning is shown if a risk is detected,FR-008
+UC-09,Manage doctor catalog,Admin,System,Admin adds/edits/removes doctor and specialty information.,Logged in as admin,Catalog updated,FR-009
+UC-10,View statistics report,Admin,System,Admin views operational statistics for a given period.,Historical data available,Report displayed/exported,FR-010
+UC-11,Verify health insurance coverage,Patient,Health insurance provider,A patient or receptionist checks whether the patient's insurance policy is valid for the selected visit.,Patient is logged in and a policy number is available,Coverage status (valid/invalid/pending) is returned and stored with the appointment,FR-011
+UC-12,Enforce role-based access control,System,Authenticated user,The system grants or denies access to features according to the authenticated user's role.,User is authenticated,Only role-permitted operations succeed; unauthorized requests are rejected,FR-012

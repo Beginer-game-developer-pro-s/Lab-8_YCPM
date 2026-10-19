@@ -1,0 +1,6 @@
+HazardID,HazardSummary,OverallRisk,TracedFR,TracedNFR,NFRIntentVsHazard,ExistingMitigation,Compliance,Gap
+HZ-001,Drug-interaction warning fails to display,High,FR-008,NFR-007,Mismatch: NFR-007 measures doctor double-booking latency not clinical-alert accuracy,Manual double-check + warning logging,Insufficient,Need NFR for false-negative rate and fail-closed behaviour
+HZ-002,Undetected doctor double-booking,High,FR-003,NFR-007,Aligned: NFR-007 and unique(doctor slot) target this hazard,DB unique constraint + application validation,Sufficient,Keep hard-block for the same doctor; complement with concurrency tests (TC-007)
+HZ-003,Medical-record breach via cyberattack,High,FR-012,NFR-003; NFR-004,Partial: encryption and data minimisation do not demonstrate exploit resistance,AES-256 TLS RBAC intrusion monitoring,Insufficient,Need a mandatory penetration-testing NFR with closure of Critical/High findings
+HZ-004,Outage during peak hours,Medium,FR-003,NFR-002; NFR-008,Aligned: uptime and RPO/RTO address loss of booking capability,Redundancy auto-scaling DR plan,Sufficient,Real load and failover drills remain future work
+HZ-005,Reminder sent at wrong local time,Low,FR-006,(none),No NFR for timezone correctness,Store UTC + multi-timezone testing,Insufficient,Add an NFR for reminder time accuracy across timezones (low residual risk)

@@ -1,0 +1,6 @@
+HazardID,HazardDescription,PotentialConsequence,SeverityLevel,Likelihood,OverallRisk,RelatedRequirement,MitigationMeasure
+HZ-001,Drug interaction warning fails to display due to a system fault,Doctor prescribes a drug that is dangerous to the patient,Catastrophic,Low,High,"NFR-007,FR-008",Fallback: mandatory manual double-check + mandatory warning logging
+HZ-002,Undetected appointment conflict (double booking),"Patient waits excessively, loss of trust, may delay urgent care",Major,Medium,High,"NFR-007,FR-003","Database unique(doctor, slot) constraint + application-layer validation"
+HZ-003,Medical record data breach via cyberattack,"Privacy violation, legal consequences, reputational damage",Catastrophic,Low,High,"NFR-003,NFR-004","AES-256 encryption, TLS, RBAC, intrusion monitoring"
+HZ-004,System outage during peak hours,Patients cannot book time-critical appointments,Moderate,Medium,Medium,"NFR-002,NFR-008","Redundant architecture, auto-scaling, disaster-recovery plan"
+HZ-005,Reminder sent at the wrong time due to timezone bug,"Patient arrives late/early, disrupts doctor's schedule",Minor,Medium,Low,FR-006,"Standardize storage in UTC, multi-timezone testing"

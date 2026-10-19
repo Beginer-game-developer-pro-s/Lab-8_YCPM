@@ -1,0 +1,13 @@
+TestCaseID,RelatedRequirement,TestCaseName,Steps,ExpectedResult,Status
+TC-001,FR-003,Successful booking with an available time slot,1. Log in; 2. Select doctor; 3. Select an available slot; 4. Confirm booking,"Appointment created successfully, status=pending_confirmation",Not run
+TC-002,FR-003,Booking fails when the time slot is already taken,1. Log in; 2. Select doctor; 3. Select an already-booked slot; 4. Confirm,System rejects with message 'slot already booked',Not run
+TC-003,FR-004,Cancel appointment succeeds more than 2 hours before,1. Open appointment; 2. Cancel with >2h remaining before slot,Appointment status changes to cancelled,Not run
+TC-004,FR-004,Cancel appointment rejected within 2 hours before,1. Open appointment; 2. Cancel with <2h remaining before slot,"System rejects, shows cancellation policy message",Not run
+TC-005,FR-008,Warning shown when prescription conflicts with allergy history,1. Doctor opens prescription; 2. Add a drug conflicting with patient's allergy list,System shows a red warning and requires extra confirmation,Not run
+TC-006,NFR-001,Doctor-search performance test,1. Simulate 500 concurrent users calling the doctor-search API,95% of requests respond <= 2 seconds,Not run
+TC-007,NFR-007,Detect double-booking conflict for the same doctor,1. Create 2 near-simultaneous booking requests for the same doctor and slot,System automatically rejects the 2nd request and warns within <= 1 second,Not run
+TC-008,FR-001,Registration fails with an already-used email,1. Enter an email already registered; 2. Submit registration form,System shows error 'email already in use',Not run
+TC-009,FR-012,Patient cannot access admin functionality,1. Log in as patient; 2. Call the admin API directly,System returns 403 Forbidden,Not run
+TC-010,NFR-003,Medical record data is encrypted at rest,1. Query the 'visit_result' column directly in the database,"Stored value is ciphertext, not readable as plaintext",Not run
+TC-011,FR-002,Search doctors by specialty and location returns matching results,1. Log in as patient; 2. Open doctor search; 3. Enter specialty=Cardiology and location=District 1; 4. Submit search,System displays only doctors whose specialty and location match the filters,Not run
+TC-012,FR-007,Doctor updates a patient's medical record after a visit,1. Log in as doctor; 2. Open the patient's visit history; 3. Add a new visit result and save,Visit history is displayed and the new result is stored in the medical record,Not run
